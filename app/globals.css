@@ -3,12 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --paper: #eef2f4;
-  --night: #13232e;
-  --moss: #1a6a58;
-  --brass: #c3922e;
-  --mist: #53646d;
-  --line: #c5d0d6;
+  --paper: #f8faf9;
+  --night: #0c1f2e;
+  --moss: #0d7c5f;
+  --moss-deep: #095e48;
+  --brass: #d4a745;
+  --mist: #5b7080;
+  --line: #d4dde2;
+  --chalk: #f1f5f3;
+  --accent: #2eb88a;
 }
 
 * {
@@ -23,12 +26,12 @@ body {
   margin: 0;
   color: var(--night);
   background: var(--paper);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-barlow), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: #cde4dc;
+  background: #b8e4d4;
   color: var(--night);
 }
 
@@ -52,7 +55,7 @@ body {
 }
 
 .section {
-  padding: 5.5rem 0;
+  padding: 6rem 0;
 }
 
 .rule {
@@ -61,13 +64,16 @@ body {
 }
 
 .display {
-  font-family: var(--font-serif), Georgia, serif;
-  letter-spacing: -0.03em;
+  font-family: var(--font-barlow), system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .label {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: var(--moss);
 }
 
@@ -76,8 +82,9 @@ body {
   align-items: center;
   gap: 0.6rem;
   min-height: 2.85rem;
-  padding: 0.7rem 1.15rem;
+  padding: 0.7rem 1.4rem;
   border: 1px solid transparent;
+  border-radius: 0.6rem;
   font-size: 0.92rem;
   font-weight: 600;
   text-decoration: none;
@@ -97,28 +104,32 @@ body {
 }
 
 .button-primary {
-  background: var(--moss);
-  color: #f7f9fa;
-  box-shadow: 0 10px 22px rgba(26, 106, 88, 0.2);
+  background: linear-gradient(135deg, var(--moss), var(--accent));
+  color: #fff;
+  box-shadow: 0 10px 28px rgba(13, 124, 95, 0.25);
 }
 
 .button-primary:hover {
-  background: #145246;
+  background: linear-gradient(135deg, var(--moss-deep), var(--moss));
+  box-shadow: 0 12px 32px rgba(13, 124, 95, 0.3);
 }
 
 .button-ghost {
   background: transparent;
   color: var(--night);
   border-color: var(--line);
+  border-radius: 0.5rem;
 }
 
 .button-ghost:hover {
-  border-color: var(--night);
+  border-color: var(--moss);
+  color: var(--moss);
 }
 
 .button-light {
-  background: #f7f9fa;
+  background: #f1f5f3;
   color: var(--night);
+  border-radius: 0.5rem;
 }
 
 .button-light:hover {
@@ -130,6 +141,7 @@ body {
   font-size: 0.92rem;
   font-weight: 550;
   color: #3d4e57;
+  transition: color 0.2s ease;
 }
 
 .nav-link::after {
@@ -138,8 +150,9 @@ body {
   left: 0;
   bottom: -0.35rem;
   width: 0;
-  height: 1px;
-  background: var(--moss);
+  height: 2px;
+  background: linear-gradient(90deg, var(--moss), var(--accent));
+  border-radius: 1px;
   transition: width 0.2s ease;
 }
 
@@ -157,16 +170,23 @@ body {
 .industry-card,
 .contact-card {
   border: 1px solid var(--line);
-  background: #f7f9fa;
+  background: #fff;
+  border-radius: 1rem;
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
 .service-card:hover,
 .industry-card:hover,
 .contact-card:hover {
-  transform: translateY(-4px);
-  border-color: #9bb8af;
-  box-shadow: 0 18px 40px rgba(19, 35, 46, 0.1);
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 20px 44px rgba(13, 124, 95, 0.16);
+}
+
+.portfolio-card {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 
 .portfolio-card .art {
@@ -177,13 +197,29 @@ body {
   transform: scale(1.04);
 }
 
-.portfolio-card {
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
-}
-
 .portfolio-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 18px 40px rgba(19, 35, 46, 0.12);
+}
+
+/* Clients marquee */
+.clients-track {
+  display: flex;
+  animation: marquee 25s linear infinite;
+  width: max-content;
+}
+
+.clients-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .campus-beam {
@@ -217,8 +253,8 @@ body {
 
 .grid-motion {
   background-image:
-    linear-gradient(rgba(26, 106, 88, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(26, 106, 88, 0.07) 1px, transparent 1px);
+    linear-gradient(rgba(13, 124, 95, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 124, 95, 0.07) 1px, transparent 1px);
   background-size: 56px 56px;
   animation: grid-shift 28s linear infinite;
 }

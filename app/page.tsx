@@ -7,6 +7,7 @@ import { PortfolioCard } from '@/components/portfolio-card';
 import { FAQAccordion } from '@/components/faq-accordion';
 import { CTASection } from '@/components/cta-section';
 import { CTAButton } from '@/components/cta-button';
+import { ClientsSection } from '@/components/clients-section';
 import { ScrollReveal } from '@/components/scroll-reveal';
 import { services } from '@/data/services';
 import { featuredProject, projects } from '@/data/projects';
@@ -75,7 +76,7 @@ export default function HomePage() {
           <div className="grid gap-4">
             {capabilities.map((item, index) => (
               <ScrollReveal key={item.title} delay={index * 80}>
-                <article className="border border-line bg-chalk p-6">
+                <article className="rounded-2xl border border-line bg-white p-7 transition-all hover:border-accent hover:shadow-lift">
                   <h3 className="display text-2xl">{item.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-mist">{item.copy}</p>
                 </article>
@@ -116,7 +117,7 @@ export default function HomePage() {
               'Understand: explain programmes, campuses and outcomes without clutter.',
               'Act: give people one honest path to enquire, visit or apply.',
             ].map((item) => (
-              <p key={item} className="border border-white/10 p-6 leading-7 text-white/75">
+              <p key={item} className="rounded-2xl border border-white/10 bg-white/5 p-6 leading-7 text-white/80">
                 {item}
               </p>
             ))}
@@ -149,8 +150,8 @@ export default function HomePage() {
           />
           <div className="grid gap-6 lg:col-span-2">
             {reasons.map((item) => (
-              <article key={item.title} className="border-t border-line pt-5">
-                <h3 className="display text-2xl">{item.title}</h3>
+              <article key={item.title} className="border-t border-line pt-6">
+                <h3 className="display text-[1.65rem]">{item.title}</h3>
                 <p className="mt-3 leading-7 text-mist">{item.copy}</p>
               </article>
             ))}
@@ -204,6 +205,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <ClientsSection />
 
       <section className="section bg-chalk">
         <div className="container-page grid gap-10 lg:grid-cols-2">

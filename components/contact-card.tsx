@@ -14,10 +14,10 @@ export function ContactCard({
   return (
     <a
       href={href}
-      className="contact-card flex items-start gap-4 p-5"
+      className="contact-card flex items-start gap-4 p-5 group"
       {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
     >
-      <span className="flex h-11 w-11 shrink-0 items-center justify-center border border-line text-moss">
+      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-line text-moss transition-colors group-hover:border-moss group-hover:bg-moss group-hover:text-chalk">
         {icon}
       </span>
       <span>
