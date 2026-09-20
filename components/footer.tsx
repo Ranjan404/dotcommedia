@@ -18,21 +18,21 @@ export function Footer() {
           <div className="mt-6 flex gap-3">
             <a
               href={contact.phoneHref}
-              className="flex h-10 w-10 items-center justify-center border border-white/15 transition-colors hover:border-brass hover:text-brass"
+              className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 transition-colors hover:border-brass hover:text-brass"
               aria-label={`Call ${contact.phone}`}
             >
               <PhoneIcon className="h-4 w-4" />
             </a>
             <a
               href={contact.whatsapp}
-              className="flex h-10 w-10 items-center justify-center border border-white/15 transition-colors hover:border-brass hover:text-brass"
+              className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 transition-colors hover:border-brass hover:text-brass"
               aria-label="WhatsApp"
             >
               <WhatsAppIcon className="h-4 w-4" />
             </a>
             <a
               href={`mailto:${contact.emails[0].address}`}
-              className="flex h-10 w-10 items-center justify-center border border-white/15 transition-colors hover:border-brass hover:text-brass"
+              className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 transition-colors hover:border-brass hover:text-brass"
               aria-label={`Email ${contact.emails[0].address}`}
             >
               <MailIcon className="h-4 w-4" />

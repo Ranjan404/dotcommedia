@@ -1,21 +1,15 @@
 import type { Metadata } from 'next';
-import { Instrument_Serif, Outfit } from 'next/font/google';
+import { Barlow } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { SkipLink } from '@/components/skip-link';
 import { contact, site } from '@/data/site';
 
-const serif = Instrument_Serif({
-  weight: '400',
+const barlow = Barlow({
   subsets: ['latin'],
-  variable: '--font-serif',
-  display: 'swap',
-});
-
-const sans = Outfit({
-  subsets: ['latin'],
-  variable: '--font-sans',
+  variable: '--font-barlow',
+  weight: ['300', '400', '500', '600', '700', '800'],
   display: 'swap',
 });
 
@@ -68,7 +62,7 @@ const organizationJsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${serif.variable} ${sans.variable} font-sans`}>
+      <body className={`${barlow.variable} font-barlow`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}

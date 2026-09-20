@@ -5,7 +5,7 @@ import { Arrow, ServiceGlyph } from './icons';
 export function ServiceCard({ service }: { service: Service }) {
   return (
     <article className="service-card group flex h-full flex-col p-6">
-      <span className="flex h-11 w-11 items-center justify-center border border-line text-moss transition-colors group-hover:border-moss group-hover:bg-moss group-hover:text-chalk">
+      <span className="flex h-11 w-11 items-center justify-center rounded-lg border border-line text-moss transition-colors group-hover:border-moss group-hover:bg-moss group-hover:text-chalk">
         <ServiceGlyph name={service.icon} />
       </span>
       <h3 className="display mt-5 text-2xl">{service.title}</h3>

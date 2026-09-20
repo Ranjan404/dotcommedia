@@ -7,7 +7,7 @@ export function ProcessTimeline({
     <ol className="grid gap-0">
       {steps.map((item, index) => (
         <li key={item.step} className="grid grid-cols-[3.5rem_1fr] gap-4 border-t border-line py-5">
-          <span className="font-semibold text-moss">
+          <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-moss/10 text-sm font-bold text-moss">
             {String(index + 1).padStart(2, '0')}
           </span>
           <div>

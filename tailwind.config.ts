@@ -5,26 +5,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        paper: '#eef2f4',
-        night: '#13232e',
+        paper: '#f8faf9',
+        night: '#0c1f2e',
         moss: {
-          DEFAULT: '#1a6a58',
-          deep: '#145246',
+          DEFAULT: '#0d7c5f',
+          deep: '#095e48',
         },
-        brass: '#c3922e',
-        mist: '#53646d',
-        line: '#c5d0d6',
-        chalk: '#f7f9fa',
+        brass: '#d4a745',
+        mist: '#5b7080',
+        line: '#d4dde2',
+        chalk: '#f1f5f3',
+        accent: '#2eb88a',
       },
       fontFamily: {
-        serif: ['var(--font-serif)', 'Georgia', 'serif'],
-        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+        barlow: ['var(--font-barlow)', 'system-ui', 'sans-serif'],
       },
       maxWidth: {
         page: '72rem',
       },
       boxShadow: {
-        lift: '0 18px 40px rgba(19, 35, 46, 0.12)',
+        lift: '0 20px 44px rgba(13, 124, 95, 0.16)',
       },
     },
   },

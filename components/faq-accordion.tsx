@@ -9,7 +9,7 @@ export function FAQAccordion({ items }: { items: FAQ[] }) {
   const baseId = useId();
 
   return (
-    <div className="divide-y divide-line border border-line bg-chalk">
+    <div className="divide-y divide-line rounded-xl border border-line bg-white overflow-hidden">
       {items.map((item, index) => {
         const expanded = open === index;
         const panelId = `${baseId}-panel-${index}`;

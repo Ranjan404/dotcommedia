@@ -8,7 +8,7 @@ export function Hero() {
       <div className="container-page grid items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
         <div>
           <p className="label">For schools, colleges and learning businesses</p>
-          <h1 className="display mt-4 max-w-3xl text-4xl leading-[1.08] text-night sm:text-5xl lg:text-6xl">
+          <h1 className="display mt-4 max-w-3xl text-[2.75rem] leading-[1.08] text-night sm:text-5xl lg:text-[3.6rem]">
             Digital growth built for education.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-mist">

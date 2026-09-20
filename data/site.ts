@@ -1,5 +1,13 @@
 import type { FAQ, NavLink, Office } from './types';
 
+export const clients = [
+  'Kidzee',
+  'Birla Open Minds School',
+  'Mount Litera Zee School',
+  'Poddar International School',
+  'Edify School',
+] as const;
+
 export const site = {
   name: 'DotComMedia',
   tagline: 'Digital Growth Built for Education',

@@ -9,7 +9,7 @@ export function IndustryCard({ industry }: { industry: Industry }) {
       <p className="mt-3 flex-1 text-sm leading-6 text-mist">{industry.description}</p>
       <div className="mt-5 flex flex-wrap gap-2">
         {industry.needs.map((need) => (
-          <span key={need} className="border border-line px-2.5 py-1 text-xs text-mist">
+          <span key={need} className="rounded-full border border-line px-2.5 py-1 text-xs text-mist">
             {need}
           </span>
         ))}
